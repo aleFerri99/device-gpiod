@@ -1,0 +1,9 @@
+[[DeviceList]]
+  Name = 'device-gpiod'
+  ProfileName = 'device-gpiod'
+  Description = 'gpiod handler'
+  Labels = [ 'industrial', 'gpiod' ]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.other]
+      Address = 'gpiod'
+      Port = '300'

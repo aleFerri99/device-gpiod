@@ -1,0 +1,62 @@
+apiVersion: "v2"
+name: "device-gpiod"
+manufacturer: "Concept Reply"
+model: "SP-01"
+labels:
+  - "gpiod"
+description: "gpiod Handler Device Service"
+
+deviceResources:
+  -
+    name: "GPIO"
+    isHidden: false
+    description: "Switch On/Off"
+    properties:
+        valueType: "Bool"
+        readWrite: "RW"
+        defaultValue: "true"
+  
+  -
+    name: "RED"
+    isHidden: false
+    description: "Switch On/Off"
+    properties:
+        valueType: "Bool"
+        readWrite: "RW"
+        defaultValue: "true"
+
+  -
+    name: "YELLOW"
+    isHidden: false
+    description: "Switch On/Off"
+    properties:
+        valueType: "Bool"
+        readWrite: "RW"
+        defaultValue: "true"
+
+  -
+    name: "GREEN"
+    isHidden: false
+    description: "Switch On/Off"
+    properties:
+        valueType: "Bool"
+        readWrite: "RW"
+        defaultValue: "true"
+
+  -
+    name: "FLASHING"
+    isHidden: false
+    description: "Switch On/Off"
+    properties:
+        valueType: "Bool"
+        readWrite: "RW"
+        defaultValue: "true"
+
+deviceCommands:
+-
+  name: "Gpio-Command"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "RED", defaultValue: "false" }
+    - { deviceResource: "GREEN", defaultValue: "false" }
